@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AESDecrypt" xml:space="preserve">
+    <value>public static string AES_Decrypt(string TexT, string iKey)
+        {
+            AesManaged AES_256 = new AesManaged();
+            MD5CryptoServiceProvider HashAES = new MD5CryptoServiceProvider();
+            string Decrypt = "";
+            byte[] Hash = HashAES.ComputeHash(ASCIIEncoding.ASCII.GetBytes(iKey));
+            AES_256.Key = Hash;
+            AES_256.Mode = CipherMode.ECB;
+            byte[] Buffer1 = Convert.FromBase64String(TexT);
+            Decrypt = System.Text.ASCIIEncoding.ASCII.GetString(AES_256.CreateDecryptor().TransformFinalBlock(Buffer1, 0, Buffer1.Length));
+            return Decrypt;
+        }</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Clicking_Sounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Clicking_Sounds.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RC2Decrypt" xml:space="preserve">
+    <value>public static string RC2_Decrypt(string intext, string pass)
+        {
+            RC2CryptoServiceProvider RC2 = new RC2CryptoServiceProvider();
+            MD5CryptoServiceProvider MD5 = new MD5CryptoServiceProvider();
+            string decrypt = "";
+            byte[] Code = MD5.ComputeHash(System.Text.ASCIIEncoding.ASCII.GetBytes(pass));
+            RC2.Key = Code;
+            RC2.Mode = CipherMode.ECB;
+            byte[] base64 = Convert.FromBase64String(intext);
+            decrypt = System.Text.ASCIIEncoding.ASCII.GetString(RC2.CreateDecryptor().TransformFinalBlock(base64, 0, base64.Length));
+            return decrypt;
+        }</value>
+  </data>
+  <data name="ReverseString" xml:space="preserve">
+    <value>public static string ReverseString(string s)
+        {
+            char[] arr = s.ToCharArray();
+            Array.Reverse(arr);
+            return new string(arr);
+        }</value>
+  </data>
+  <data name="RijndaelDecrypt" xml:space="preserve">
+    <value>public static string RijndaelDecrypt(string UDecryptU, string UKeyU)
+        {
+            RijndaelManaged XoAesProviderX = new RijndaelManaged();
+            byte[] XbtCipherX = null;
+            byte[] XbtSaltX = new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+            Rfc2898DeriveBytes XoKeyGeneratorX = new Rfc2898DeriveBytes(UKeyU, XbtSaltX);
+            XoAesProviderX.Key = XoKeyGeneratorX.GetBytes(XoAesProviderX.Key.Length);
+            XoAesProviderX.IV = XoKeyGeneratorX.GetBytes(XoAesProviderX.IV.Length);
+            System.IO.MemoryStream XmsX = new System.IO.MemoryStream();
+            CryptoStream XcsX = new CryptoStream(XmsX, XoAesProviderX.CreateDecryptor(), CryptoStreamMode.Write);
+            try
+            {
+                XbtCipherX = Convert.FromBase64String(UDecryptU);
+                XcsX.Write(XbtCipherX, 0, XbtCipherX.Length);
+                XcsX.Close();
+                UDecryptU = System.Text.Encoding.UTF8.GetString(XmsX.ToArray());
+            }
+            catch
+            {
+            }
+            return UDecryptU;</value>
+  </data>
+  <data name="TDesDecrypt" xml:space="preserve">
+    <value>public static string TDesDecrypt(string txt, string pass)
+        {
+            TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            string decrypt = "";
+
+            byte[] Kode = md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(pass));
+            tdes.Key = Kode;
+            tdes.Mode = CipherMode.ECB;
+            byte[] base64 = Convert.FromBase64String(txt);
+            decrypt = System.Text.ASCIIEncoding.ASCII.GetString(tdes.CreateDecryptor().TransformFinalBlock(base64, 0, base64.Length));
+            return decrypt;
+        }</value>
+  </data>
+  <data name="VernamDecrypt" xml:space="preserve">
+    <value>public static string VernamDecrypt(string input, string pass)
+        {
+            StringBuilder Out1 = new StringBuilder();
+            foreach(char ch in input)
+            {
+                string tmp = Strings.ChrW(Strings.AscW(ch) / (Strings.AscW(pass) % 30)).ToString();
+             Out1.Append(tmp);
+            }
+            return Out1.ToString();
+            }</value>
+  </data>
+  <data name="VigenereDecrypt" xml:space="preserve">
+    <value>public static string VigenereDecrypt(string text, string pass)
+        {
+            string morocco = null;
+            for (int i = 1; i &lt;= text.Length;i++ )
+            {
+                int tmp = Strings.AscW(Strings.GetChar(text, i)) - Strings.AscW(Strings.GetChar(pass, i % pass.Length + 1));
+                morocco += Strings.ChrW(tmp);
+            }
+            return morocco;
+        }</value>
+  </data>
+</root>

@@ -1,0 +1,9 @@
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\bin\Debug\Smart Crypter.exe.config
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\bin\Debug\Smart Crypter.exe
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\bin\Debug\Smart Crypter.pdb
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\bin\Debug\RecuperareII.dll
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\obj\Debug\Smart_Crypter.Main.resources
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\obj\Debug\Smart_Crypter.Properties.Resources.resources
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\obj\Debug\Smart Crypter.csproj.GenerateResource.Cache
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\obj\Debug\Smart Crypter.exe
+C:\Users\Jameel\Desktop\Cyber apps\Smart Crypter\obj\Debug\Smart Crypter.pdb
