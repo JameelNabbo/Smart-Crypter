@@ -1,16 +1,15 @@
-# Smart-Crypter
-# Smart-Crypter
-Smart-Crypter is a simple powerfull Crypter, convenient and secure encryption client.
-Methods of encryptions:
-1- AES (acronym of Advanced Encryption Standard)
-2- RC2 Encryption.This takes a 64-bit input quantity stored in words
-3- Rijndael Encryption algorithm
-4- Triple DES Encryptoin. uses a "key bundle" that comprises three DES keys, K1, K2 and K3
-5- VernamII Encryption algorithm
-6- Vigenere Encryption algorithm
+## Smart-Crypter
+Smart-Crypter is a simple powerfull Crypter, convenient and secure encryption client.<br />
+Methods of encryptions:<br />
+1- <strong>AES</strong> (acronym of Advanced Encryption Standard)<br />
+2- <strong>RC2 Encryption</strong>.This takes a 64-bit input quantity stored in words<br />
+3- <strong>Rijndael Encryption algorithm</strong><br />
+4- <strong>Triple DES Encryptoin</strong>. uses a "key bundle" that comprises three DES keys, K1, K2 and K3<br />
+5- <strong>VernamII Encryption algorithm</strong><br />
+6- <strong>Vigenere Encryption algorithm</strong><br />
 
  <img src="https://github.com/JameelNabbo/Smart-Crypter/blob/master/smart_crypter.png"
-             alt="Smart Crypter">
+             alt="Smart Crypter"><br />
 
 
 
